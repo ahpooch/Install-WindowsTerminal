@@ -1,6 +1,6 @@
 # Install-WindowsTerminal
 
-Easily install the new Windows Terminal or Windows Terminal Preview on Windows Server 2022 and newer.
+Easily install the new Windows Terminal or Windows Terminal Preview on Windows Server 2022 and newer.  
 Inspired by: https://github.com/microsoft/terminal/discussions/13983#discussioncomment-7554301
 
 ## What version of Windows Terminal or Windows Terminal Preview will be installed
