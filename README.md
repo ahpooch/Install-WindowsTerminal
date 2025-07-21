@@ -4,32 +4,43 @@ Easily install the new Windows Terminal or Windows Terminal Preview on Windows S
 Inspired by: https://github.com/microsoft/terminal/discussions/13983#discussioncomment-7554301
 
 ## Current versions provided by scripts
-Current `Windows Terminal` version provided by `Install-WindowsTerminal.ps1` script : 1.21.3231.0  
-Current `Windows Terminal Preview` version provided by `Install-WindowsTerminal.ps1` script : 1.22.3232.0  
+The script performs calls to a GitHub API to find the latest `Windows Terminal` and `Windows Terminal Preview` versions available.
 
 ## Usage
 ### Online installation
-Install-WindowsTerminal.ps1 can download all files by itself. Just use one of examples below.  
 ```Powershell
 # Example 1: Installing for current user.
-& .\Install-WindowsTerminal
+& .\Install-WindowsTerminal.ps1
 
 # Example 2: Installing for all users.
-& .\Install-WindowsTerminal -Scope AllUsers
+& .\Install-WindowsTerminal.ps1 -Scope AllUsers
 
 # Example 3: Installing Preview version for current user.
-& .\Install-WindowsTerminal -Preview
+& .\Install-WindowsTerminal.ps1 -Preview
 
 # Example 4: Installing Preview version for all users.
-& .\Install-WindowsTerminal -Scope AllUsers -Preview
+& .\Install-WindowsTerminal.ps1 -Scope AllUsers -Preview
 ```
 ### Offline installation
-Install-WindowsTerminal.ps1 can be used as offline installer. Just download files manually and place it in the same folder.  
-#### Download Microsoft.VCLibs.x64.14.00.Desktop.appx  
-https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx  
-#### Download Microsoft.UI.Xaml.2.8.x64.appx  
-https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx  
-#### Download Windows Terminal  
-https://github.com/microsoft/terminal/releases/download/v1.21.3231.0/Microsoft.WindowsTerminal_1.21.3231.0_8wekyb3d8bbwe.msixbundle  
-#### Download Windows Terminal Preview  
-https://github.com/microsoft/terminal/releases/download/v1.22.3232.0/Microsoft.WindowsTerminalPreview_1.22.3232.0_8wekyb3d8bbwe.msixbundle  
+Install-WindowsTerminal.ps1 can be used as offline installer.
+#### Dowloading content for offline install
+Using computer with internet access download offline content for desired version.
+```Powershell
+    # Download files for Windows Terminal offline installation.
+    & .\Install-WindowsTerminal.ps1 -DownloadOnly
+```
+Or
+```Powershell
+    # Download files for Windows Terminal Preview offline installation.
+    & .\Install-WindowsTerminal.ps1 -Preview -DownloadOnly
+```
+#### Permorm offline installation
+```Powershell
+    # Installation of Windows Termina for all users, using cached files in the script directory.
+    & .\Install-WindowsTerminal.ps1 -Scope AllUsers -OfflineInstall
+```
+Or
+```Powershell
+    # Installation of Windows Terminal Preview for all users, using cached files in the script directory.
+    & .\Install-WindowsTerminal.ps1 -Scope AllUsers -Preview -OfflineInstall
+```
