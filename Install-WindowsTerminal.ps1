@@ -59,7 +59,7 @@
     PS> & .\Install-WindowsTerminal.ps1 -Preview -DownloadOnly
     
     .EXAMPLE
-    Installation of Windows Termianl for current user, using cached files in the script directory.
+    Installation of Windows Terminal for current user, using cached files in the script directory.
     PS> & .\Install-WindowsTerminal.ps1 -OfflineInstall
 
     .EXAMPLE
@@ -273,15 +273,15 @@ if (-not $OfflineInstall) {
 
 ### Getting application name from repository tag or from cached file.
 if (-not $OfflineInstall) {
-    # Application name aquaired from repository
-    #   - format refference: 'Windows Terminal Preview v1.23.11752.0'
+    # Application name acquired from repository
+    #   - format reference: 'Windows Terminal Preview v1.23.11752.0'
     $Application = $WindowsTerminalLatestTag.name
 }
 else {
     $Application = "Windows Terminal"
     if ($Preview) { $Application += " Preview" }
     # $WindowsTerminalFileName
-    #   - format refference: Microsoft.WindowsTerminal_1.22.11751.0_8wekyb3d8bbwe.msixbundle
+    #   - format reference: Microsoft.WindowsTerminal_1.22.11751.0_8wekyb3d8bbwe.msixbundle
     $WindowsTerminalFileName -match [regex]'_([\d\.]+)_' 
     $WindowsTerminalFileVersion = $Matches[1]
     if ($WindowsTerminalFileVersion) { $Application += $WindowsTerminalFileVersion }
