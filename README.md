@@ -1,5 +1,5 @@
 # Install-WindowsTerminal
-
+<p align="center"><img src="https://raw.githubusercontent.com/ahpooch/Install-WindowsTerminal/main/Assets/Install-WindowsTerminal.png" />
 Easily install the new Windows Terminal or Windows Terminal Preview on Windows Server 2022 and newer.  
 Inspired by: https://github.com/microsoft/terminal/discussions/13983#discussioncomment-7554301
 
