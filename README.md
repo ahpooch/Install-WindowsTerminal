@@ -46,7 +46,7 @@ Using computer with internet access download offline content for desired version
 #### Perform offline installation
 
 ```Powershell
-    # Example 1: Installation of Windows Termina for all users, using cached files in the script directory.
+    # Example 1: Installation of Windows Terminal for all users, using cached files in the script directory.
     & .\Install-WindowsTerminal.ps1 -Scope AllUsers -OfflineInstall
 ```
 
