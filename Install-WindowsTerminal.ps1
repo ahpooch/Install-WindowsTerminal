@@ -108,7 +108,7 @@ else {
     $Script:PackageName = "Microsoft.WindowsTerminal"
     $Package = Get-AppxPackage -Name $Script:PackageName
 }
-if ($null -ne $Package) {
+if ($null -ne $Package -and -not $DownloadOnly) {
     Write-Host "$Script:PackageName is already installed."
     Write-Host "Remove $Script:PackageName if you want to install new version of it using this script."
     Write-Host "You could use command `'Get-AppxPackage $Script:PackageName | Remove-AppxPackage`' to remove it."
